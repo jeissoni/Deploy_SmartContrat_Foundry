@@ -1,0 +1,13 @@
+[profile.default]
+src = 'src'
+out = 'out'
+libs = ['lib']
+
+
+[rpc_endpoints]
+linea = "${LINEA_RPC_URL}"
+
+[etherscan]
+linea = { key = "${ETHERSCAN_API_KEY}" }
+
+# See more config options https://github.com/foundry-rs/foundry/tree/master/config
