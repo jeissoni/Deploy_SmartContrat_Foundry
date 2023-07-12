@@ -13,11 +13,9 @@ Esto instalará Foundryup, luego simplemente siga las instrucciones en pantalla,
 
 Al ejecutarse solo, se instalarán los últimos binarios precompilados 
 
-
 nota:
 
 Si está en Windows, deberá instalar y usar [Git BASH](https://gitforwindows.org/) o [WSL](https://learn.microsoft.com/en-us/windows/wsl/install), como su terminal, ya que Foundryup actualmente no es compatible con Powershell o Cmd.
-
 
 ### 2. Configuración variables de entorno
 
@@ -25,16 +23,16 @@ Cree un archivo `.env` en la raíz del repositorio. En el repositorio hay un arc
 
 `PRIVATE_KEY` es la llave privada de la cuenta que va pagar la transacción para desplegar los contratos, debe tener saldo de ETH de prueba en la red que desea desplegar. **No copie su llave privada en ningun otro archivo que no sea el .env**
 
-`LINEA_RPC_URL` es el endpoint de la red en donde se desplegara el contrato. Se recomienda crear una cuenta en [Infura](https://www.infura.io/) en donde podra optener una `API-KEY` para sus endpoints
+`LINEA_RPC_URL` es el endpoint de la red en donde se desplegara el contrato. Se recomienda crear una cuenta en [Infura](https://www.infura.io/) en donde podrá obtener una `API-KEY` para sus endpoints
 
 Como ejemplo de endpoint sera asi.
 `https://linea-goerli.infura.io/v3/<API-KEY>`
 
 ### 3. Desplegar contratos
 
-Desde la raiz del repositorio y desde consola.
+Desde la raíz del repositorio y desde consola.
 
-3.1 Cargamos las variables de entorno desde el archivo `.env` con el siguiente codigo:
+3.1 Cargamos las variables de entorno desde el archivo `.env` con el siguiente código:
 
 `source .env`
 
@@ -46,8 +44,9 @@ si todo sale bien el resultado dira:
 
 `Script ran successfully.`
 
-Encontrara tambien el hash de la transacción y el address del contrato desplegado. 
+Encontrara también el hash de la transacción y el address del contrato desplegado. 
 
-Para deplegar el contrato ERC20 será con la siguiente instrucción
+Para desplegar el contrato ERC20 será con la siguiente instrucción
 
 `forge script script/deployERC20.s.sol:MyScriptERC20 --rpc-url $LINEA_RPC_URL --broadcast -vvvv`
+
